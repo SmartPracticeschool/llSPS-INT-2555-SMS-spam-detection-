@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	
+</head>
+<style>
+body
+{
+    margin-top:90px;
+    text-align:center;
+	padding:0;
+	background: url("https://i.pinimg.com/originals/ec/8d/da/ec8dda885688ef35203135cc247e2259.gif");
+	background-size:cover;
+	font-family: Georgia;
+ 
+}
+
+.loginBox
+{
+	margin-top:20px;
+    position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width:350px;
+	height:420px;
+	padding:80px 40px;
+	box-sizing: border-box;
+	background:rgba(0,0,0,0) ;
+	color:white;
+}
+
+h2
+{
+	margin:0;
+	padding:0 0 20px;
+	color: #ddff99;
+	text-align:center;
+} 
+p
+{
+    word-spacing:5px;
+}
+.loginBox input
+{
+	width:90%;
+	margin-bottom:50px; 
+	color:black;
+	font-weight: 100;
+	font-style:bold;
+}
+
+input {
+  border-collapse: collapse;
+  background-color : transparent;
+  padding: 10px 10px
+  margin:30px 20px 0px 10px;
+  font-size:20px;
+
+  
+}
+
+
+.loginBox input[type="submit"]
+{   
+    margin-top:-20px;
+	border:#ddff99;
+	outline:none;
+	height: 40px;
+	color:2px solid blue;
+	font-size:16px;
+	text-align:center;
+	background:#ddff99;
+	cursor:pointer;
+	border-radius:10px;
+	transition:1s;
+	font-family:georgia;
+	font-style:bold;
+	font-weight:800;
+	
+}
+
+.loginBox input[type="submit"]:hover
+{
+	background:beige;
+	color: darkgrey;
+	box-shadow: 0 2px 30px 0 #ddff99 inset, 0 2px 30px 0 #ddff99;
+                    0 2px 30px 0 #ddff99 inset, 0 2px 30px 0 #ddff99;
+
+    text-shadow: 0 0 2px #15f4aee, 0 0 2px ##15f4aee;
+ 
+
+}
+
+
+
+.user
+{
+	width:100px;
+	height:100px; 
+	overflow:hidden;
+	position:absolute;
+	top:calc(-100px/2);
+	left:calc(50% - 50px);
+	border-radius:50%;
+}
+ 
+::placeholder
+{
+	color:rgba(255,255,255,0.2); 
+	font-family:georgia;
+}
+
+ 
+</style>
+<body>
+    
+	<div class="loginBox">
+		<img src="https://us.123rf.com/450wm/fokaspokas/fokaspokas1804/fokaspokas180400021/98531967-a-chat-icon-white-icon-on-black-background-.jpg?ver=6" class="user">
+		<h2>Spam or Not?!</h2>
+		<form action="{{ url_for('predict')}}" method="POST">
+	    <p>Enter  your  message</p>
+		<input type="text"  align = "Center" style="color:white" placeholder="Type here..." name="message" id="rcorners1" required>
+
+
+		<input type="submit" class="btn-info" value="Predict">
+		</form>
+	</div>
+	
+</body
+</html>
